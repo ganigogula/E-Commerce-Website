@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - My Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Products</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <section class="product-list">
+
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="laptop.jpg" alt="Laptop">
+      <h3>Laptop</h3>
+      <p>₹50,000</p>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="head phone.jpg" alt="Headphones">
+      <h3>Headphones</h3>
+      <p>₹2,000</p>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="mobile.jpg" alt="Smartphone">
+      <h3>Smartphone</h3>
+      <p>₹30,000</p>
+      <button onclick="addToCart(3)">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="shoes.jpg" alt="Shoes">
+      <h3>Sports Shoes</h3>
+      <p>₹2,499</p>
+      <button onclick="addToCart(4)">Add to Cart</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="watch.jpg" alt="Smart Watch">
+      <h3>Smart Watch</h3>
+      <p>₹4,999</p>
+      <button onclick="addToCart(5)">Add to Cart</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="Camera.jpg" alt="Camera">
+      <h3>Camera</h3>
+      <p>₹42,000</p>
+      <button onclick="addToCart(6)">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2025 My E-commerce Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
