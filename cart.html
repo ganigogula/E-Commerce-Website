@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart - My Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>My Cart</h1>
     <nav>
@@ -16,17 +17,27 @@
     </nav>
   </header>
 
-  <section class="cart-container">
+  <!-- Cart Section -->
+  <section style="padding: 20px;">
     <h2>Your Shopping Cart</h2>
+
+    <!-- Cart Items Will Appear Here -->
     <div id="cart-items"></div>
+
+    <!-- Total Price -->
     <h3 id="cart-total">Total: ₹0</h3>
+
+    <!-- Checkout Button -->
     <button id="checkout-btn">Proceed to Checkout</button>
   </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer style="margin-top: 40px; text-align: center;">
     <p>© 2025 My E-commerce Website</p>
   </footer>
 
+  <!-- Script -->
   <script src="script.js"></script>
+
 </body>
 </html>

@@ -1,15 +1,4 @@
-// Get cart from localStorage
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-// Update cart count everywhere
-function updateCartCount() {
-  document.querySelectorAll("#cart-count").forEach(el => {
-    el.innerText = cart.length;
-  });
-}
-updateCartCount();
-
-// Product Data (must match your HTML buttons)
+// ================= PRODUCT DATA =================
 const products = {
   1: { name: "Laptop", price: 50000 },
   2: { name: "Headphones", price: 2000 },
@@ -19,25 +8,33 @@ const products = {
   6: { name: "Camera", price: 42000 }
 };
 
-// Add to Cart
+// ================= LOAD CART =================
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// ================= UPDATE CART COUNT =================
+function updateCartCount() {
+  document.querySelectorAll("#cart-count").forEach(el => {
+    el.innerText = cart.length;
+  });
+}
+updateCartCount();
+
+// ================= ADD TO CART =================
 function addToCart(id) {
   cart.push(products[id]);
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
-  alert("Product Added!");
+  alert("Product Added to Cart!");
 }
 
-// ================= CART PAGE =================
-
-if (document.getElementById("cart-items")) {
-  displayCart();
-}
-
+// ================= DISPLAY CART =================
 function displayCart() {
-  const container = document.getElementById("cart-items");
+  const cartContainer = document.getElementById("cart-items");
   const totalText = document.getElementById("cart-total");
 
-  container.innerHTML = "";
+  if (!cartContainer) return;
+
+  cartContainer.innerHTML = "";
   let total = 0;
 
   cart.forEach((item, index) => {
@@ -49,12 +46,13 @@ function displayCart() {
       <button onclick="removeItem(${index})">Remove</button>
       <hr>
     `;
-    container.appendChild(div);
+    cartContainer.appendChild(div);
   });
 
   totalText.innerText = "Total: ₹" + total;
 }
 
+// ================= REMOVE ITEM =================
 function removeItem(index) {
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -62,9 +60,17 @@ function removeItem(index) {
   displayCart();
 }
 
-// Checkout
-if (document.getElementById("checkout-btn")) {
-  document.getElementById("checkout-btn").addEventListener("click", function () {
+// ================= CHECKOUT =================
+function setupCheckout() {
+  const checkoutBtn = document.getElementById("checkout-btn");
+  if (!checkoutBtn) return;
+
+  checkoutBtn.addEventListener("click", function () {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
     alert("Order Placed Successfully!");
     localStorage.removeItem("cart");
     cart = [];
@@ -72,3 +78,7 @@ if (document.getElementById("checkout-btn")) {
     displayCart();
   });
 }
+
+// ================= INITIALIZE =================
+displayCart();
+setupCheckout();
