@@ -1,60 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Products - My Store</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Products</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">
-        Cart (<span id="cart-count">0</span>)
-      </a>
-    </nav>
-  </header>
+    <header>
+      <h1>Products</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </header>
 
-  <!-- Products Section -->
-  <section style="padding: 20px; display: flex; flex-wrap: wrap; gap: 20px;">
+    <section class="products">
 
-    <!-- Product 1 -->
-    <div class="product">
-      <h3>Laptop</h3>
-      <p>₹50,000</p>
-      <button onclick="addToCart(1)">Add to Cart</button>
-    </div>
+      <div class="product">
+        <img src="laptop.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>₹50000</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
 
-    <!-- Product 2 -->
-    <div class="product">
-      <h3>Headphones</h3>
-      <p>₹2,000</p>
-      <button onclick="addToCart(2)">Add to Cart</button>
-    </div>
+      <div class="product">
+        <img src="head phone.jpg" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>₹2000</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
 
-    <!-- Product 3 -->
-    <div class="product">
-      <h3>Smartphone</h3>
-      <p>₹30,000</p>
-      <button onclick="addToCart(3)">Add to Cart</button>
-    </div>
+      <div class="product">
+        <img src="mobile.jpg" alt="Mobile">
+        <h3>Smartphone</h3>
+        <p>₹30000</p>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
 
-    <!-- Product 4 -->
-    <div class="product">
-      <h3>Sports Shoes</h3>
-      <p>₹2,499</p>
-      <button onclick="addToCart(4)">Add to Cart</button>
-    </div>
+      <div class="product">
+        <img src="shoes.jpg" alt="Shoes">
+        <h3>Shoes</h3>
+        <p>₹2499</p>
+        <button onclick="addToCart(4)">Add to Cart</button>
+      </div>
 
-    <!-- Product 5 -->
-    <div class="product">
-      <h3>Smart Watch</h3>
-      <p>₹4,999</p>
-      <button onclick="addToCart(5)">Add to Cart</button>
-    </div>
+    </section>
 
-    <!-- Product 6
+    <footer>
+      <p>© 2025 My E-commerce Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
