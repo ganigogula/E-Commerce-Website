@@ -1,6 +1,6 @@
   const products = {
   1: { name: "Laptop", price: 50000, image: "laptop.jpg" },
-  2: { name: "Headphones", price: 2000, image: "headphones.jpg" },
+  2: { name: "Headphones", price: 2000, image: "head phone.jpg" },
   3: { name: "Smartphone", price: 30000, image: "mobile.jpg" },
   4: { name: "Shoes", price: 2499, image: "shoes.jpg" }
 };
